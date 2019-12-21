@@ -13,7 +13,7 @@ type RequestWithID struct {
 }
 
 type ListRequest struct {
-	Limit  int
+	Limit  int64
 	Offset int64
 }
 

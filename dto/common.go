@@ -1,10 +1,10 @@
 package dto
 
 type ListMetadata struct {
-	Count  int `json:"count"`
-	Offset int `json:"offset"`
-	Limit  int `json:"limit"`
-	Total  int `json:"total"`
+	Count  int64 `json:"count"`
+	Offset int64 `json:"offset"`
+	Limit  int64 `json:"limit"`
+	Total  int64 `json:"total"`
 }
 
 type ListResp struct {
@@ -13,6 +13,6 @@ type ListResp struct {
 }
 
 type ListRequest struct {
-	Limit  int
-	Offset int
+	Limit  int64
+	Offset int64
 }
