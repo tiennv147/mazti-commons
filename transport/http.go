@@ -63,7 +63,7 @@ func DecodeListCommonRequest(_ context.Context, r *http.Request) (interface{}, e
 	values := r.URL.Query()
 
 	oStr := values.Get("offset")
-	oVal, oErr := strconv.ParseInt(oStr, 10, 64)
+	oVal, oErr := strconv.Atoi(oStr)
 	if oErr == nil {
 		req.Offset = oVal
 	}
