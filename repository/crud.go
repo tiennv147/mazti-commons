@@ -13,7 +13,7 @@ type CrudRepo interface {
 	Get(resource interface{}, ID uint) error
 	Delete(resource interface{}) error
 	Update(resource interface{}) error
-	List(resources interface{}, offset int64, limit int64) error
+	List(resources interface{}, offset int, limit int) error
 	Count(resource interface{}) (int64, error)
 }
 
@@ -69,7 +69,7 @@ func (repo *crudRepo) Update(resource interface{}) error {
 	return nil
 }
 
-func (repo *crudRepo) List(resources interface{}, offset int64, limit int64) error {
+func (repo *crudRepo) List(resources interface{}, offset int, limit int) error {
 	q := repo.db.Offset(offset)
 	if limit > 0 {
 		q = q.Limit(limit)
