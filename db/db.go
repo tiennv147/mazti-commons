@@ -4,8 +4,7 @@ import (
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql" //mysql dialects
 	"github.com/pkg/errors"
-
-	"gitlab.com/phypass_server/go/commons/config"
+	"github.com/tiennv147/mazti-commons/config"
 )
 
 func NewDB(dbCfg *config.Database) (*gorm.DB, error) {

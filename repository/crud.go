@@ -3,7 +3,7 @@ package repository
 import (
 	"github.com/jinzhu/gorm"
 	"github.com/pkg/errors"
-	commonerror "gitlab.com/phypass_server/go/commons/errors"
+	commonerror "github.com/tiennv147/mazti-commons/errors"
 )
 
 type CrudRepo interface {
