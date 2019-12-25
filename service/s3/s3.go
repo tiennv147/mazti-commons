@@ -2,6 +2,7 @@ package s3
 
 import (
 	"errors"
+	"github.com/tiennv147/mazti-commons/config"
 	"io"
 	"log"
 	"os"
@@ -10,7 +11,6 @@ import (
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"gitlab.com/phypass_server/go/retail/retail-bundle/config"
 )
 
 var (
