@@ -9,7 +9,7 @@ import (
 )
 
 type RequestWithID struct {
-	ID int64
+	ID uint
 }
 
 type ListRequest struct {

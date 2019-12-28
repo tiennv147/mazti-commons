@@ -48,11 +48,11 @@ func DecodeRequestCommonWithID(_ context.Context, r *http.Request) (interface{},
 	if !ok {
 		return nil, errors.ErrBadRouting
 	}
-	id, err := strconv.ParseInt(idStr, 10, 64)
+	id, err := strconv.ParseUint(idStr, 10, 64)
 	if err != nil {
 		return nil, errors.ErrInconsistentIDs
 	}
-	return endpoints.RequestWithID{ID: id}, nil
+	return endpoints.RequestWithID{ID: uint(id)}, nil
 }
 
 func DecodeListCommonRequest(_ context.Context, r *http.Request) (interface{}, error) {
